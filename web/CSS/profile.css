@@ -212,8 +212,9 @@ section {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+    min-width: 40%;
+    border-radius: 3px 3px 3px 3px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
@@ -229,7 +230,7 @@ section {
 .table-style th,
 .table-style td {
     padding: 12px 15px;
-    
+    text-align: center;
     
 }
 
@@ -252,6 +253,15 @@ section {
 
 
 .table-style tbody tr:last-of-type {
-    border-bottom: 2px solid #3CB371;
     
+    border-bottom: 1px solid #3CB371;
+    
+}
+
+
+.table-header {
+    background-color: #3CB371;
+    color: #ffffff;
+    font-weight: bold;
+    width: 40%;
 }

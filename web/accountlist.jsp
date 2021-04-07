@@ -31,44 +31,47 @@
         </nav>
         
         <section>
-            <center>
-                <table class="table-style">
-                    <thead>
-                        <tr>
-                        <th>No</th>
-                        <th>Username</th>
-                        <th>Password</th>
-                        <!--
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        -->
-                        <th>Email</th>
-                        <!--
-                        <th>Birthday</th>
-                        <th>Phone</th>
-                        -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%for (int i = 0; i < customerListSize; i++) {%>
-                        <tr>
-                            <td><%=i + 1%></td>
-                            <td><%=customerList.getCustomerByNumber(i).getUsername()%></td>
-                            <td><%=customerList.getCustomerByNumber(i).getPassword()%></td>
-                            <!--
-                            <td><%=customerList.getCustomerByNumber(i).getUserFirstName()%></td>
-                            <td><%=customerList.getCustomerByNumber(i).getUserLastName()%></td>
-                            -->
-                            <td><%=customerList.getCustomerByNumber(i).getEmail()%></td>
-                            <!--
-                            <td><%=customerList.getCustomerByNumber(i).getBirthday()%></td>
-                            <td><%=customerList.getCustomerByNumber(i).getPhone()%></td>
-                            -->
-                        </tr>
-                        <%}%>
-                    </tbody>
-                </table>
-            </center>
+            
+                    <center>
+                        <table class="table-style">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Username</th>
+                                <th>Password</th>
+                                <!--
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                -->
+                                <th>Email</th>
+                                <!--
+                                <th>Birthday</th>
+                                <th>Phone</th>
+                                -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%for (int i = 0; i < customerListSize; i++) {%>
+                            <tr>
+                                <td><%=i + 1%></td>
+                                <td><%=customerList.getCustomerByNumber(i).getUsername()%></td>
+                                <td><%=customerList.getCustomerByNumber(i).getPassword()%></td>
+                                <!--
+                                <td><%=customerList.getCustomerByNumber(i).getUserFirstName()%></td>
+                                <td><%=customerList.getCustomerByNumber(i).getUserLastName()%></td>
+                                -->
+                                <td><%=customerList.getCustomerByNumber(i).getEmail()%></td>
+                                <!--
+                                <td><%=customerList.getCustomerByNumber(i).getBirthday()%></td>
+                                <td><%=customerList.getCustomerByNumber(i).getPhone()%></td>
+                                -->
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </center>
+                
+            
         </section>
         
     </body>

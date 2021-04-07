@@ -45,6 +45,7 @@
             <center>
                 <section>
                     <table class="table-style">
+                        <!--
                         <thead>
                             <tr>
                                 <th>First Name</th>
@@ -55,16 +56,32 @@
                                 <th>Phone</th>
                             </tr>
                         </thead>
+                        -->
                         <tbody>
                             <tr>
+                                <td class="table-header">First Name</td>
                                 <td data-label="First Name"><%=customer.getUserFirstName()%></td>
+                            </tr>
+                            <tr>
+                                <td class="table-header">Last Name</td>
                                 <td data-label="Last Name"><%=customer.getUserLastName()%></td>
+                            </tr>
+                            <tr>
+                                <td class="table-header">Password</td>
                                 <td data-label="Password"><%=customer.getPassword()%></td>
+                            </tr>
+                            <tr>
+                                <td class="table-header">Email</td>
                                 <td data-label="Email"><%=customer.getEmail()%></td>
+                            </tr>
+                            <tr>
+                                <td class="table-header">Birthday</td>
                                 <td data-label="Birthday"><%=customer.getBirthday()%></td>
+                            </tr>   
+                            <tr>   
+                                <td class="table-header">Phone</td>
                                 <td data-label="Phone"><%=customer.getPhone()%></td>
                             </tr>
-                            
                         </tbody>
                     </table>
                 </section>

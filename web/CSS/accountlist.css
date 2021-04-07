@@ -151,9 +151,11 @@ section {
 
 .table-style {
     border-collapse: collapse;
+    
     margin: 25px 0;
     font-size: 0.9em;
-    min-width: 400px;
+    max-width: 100%;
+    min-width: 50%;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -176,7 +178,8 @@ section {
 
 .table-style tbody tr {
     border-bottom: 1px solid #dddddd;
-    
+    border-left: 5px solid #3CB371;
+    border-right: 5px solid #3CB371;
     
 }
 
@@ -194,6 +197,6 @@ section {
 
 
 .table-style tbody tr:last-of-type {
-    border-bottom: 2px solid #3CB371;
+    border-bottom: 3px solid #3CB371;
     
 }

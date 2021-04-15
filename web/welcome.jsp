@@ -25,12 +25,14 @@
                 
                 //Check a logged customer is received or not
                 boolean isCustomerEmpty = customer == null? true : false;
+                
+                String redirectURL = "http://localhost:8080/IOTBay/unauthorised.jsp";
             %>
                    
         
-        <%if(isCustomerEmpty) {%>
-            <h1>Unauthorized action</h1>
-            <button onclick="location.href='http://localhost:8080/IOTBay/'" class="button">Back to index page</button>
+        <%if(isCustomerEmpty) {
+            response.sendRedirect(redirectURL);
+        %>
         <%}else {%>
         
             

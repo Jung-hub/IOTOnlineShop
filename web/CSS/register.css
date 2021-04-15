@@ -247,3 +247,22 @@ body {
 .errorinfo {
     color: red;
 }
+
+a:link {
+   text-decoration: none;
+   color: gray;
+}
+
+a:visited {
+    
+}
+
+a:hover {
+    color:#0082e6;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:active {
+    
+}

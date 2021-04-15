@@ -19,6 +19,7 @@
     <%
         CustomerAccount customerList= (CustomerAccount) session.getAttribute("customerList");
         Customer customer = customerList.getLoggedCustomer();
+        String redirectURL = "http://localhost:8080/IOTBay/unauthorised.jsp";
         
         String change = request.getParameter("change");
         String username = customer.getUsername();
@@ -47,9 +48,9 @@
         }
     %>
     
-    <%if(isCustomerEmpty) {%>
-        <h1>Unauthorized action</h1>
-        <button onclick="location.href='http://localhost:8080/IOTBay/'" class="button">Back to index page</button>
+    <%if(isCustomerEmpty) {
+            response.sendRedirect(redirectURL);
+    %>
     <%}else {%>
         <form class="box" action="changepassword.jsp" method="post" id="change">
             <h1>Password</h1>

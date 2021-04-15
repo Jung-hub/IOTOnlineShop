@@ -78,7 +78,7 @@
             <input type="text" id="uname" name="uname" autocomplete="off" placeholder="Username" required>
             <input type="password" id="upassword" name="upassword" autocomplete="off" placeholder="Password" required>
             <input type="password" id="cupassword" name="cupassword" autocomplete="off" placeholder="Confirm Password" required>
-            <input type="mail" id="email" name="email" autocomplete="off" placeholder="xxx@xxx.xxx" required>
+            <input type="mail" id="email" name="email" autocomplete="off" placeholder="Email" required>
             <!--
             <input type="date" id="birthday" name="birthday" autocomplete="off" placeholder="DD/MM/YYYY" required>
             <input type="tel" id="phone" name="phone" autocomplete="off" placeholder="1234567890" required>

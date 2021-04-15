@@ -18,7 +18,7 @@
             CustomerAccount customerList = (CustomerAccount)session.getAttribute("customerList");
             Customer customer = customerList.getLoggedCustomer();
             boolean isCustomerEmpty = false;
-            
+            String redirectURL = "http://localhost:8080/IOTBay/unauthorised.jsp";
             if(customer == null) {
                 isCustomerEmpty = true;
             }else {
@@ -27,9 +27,9 @@
             }
         %>
         
-        <%if(isCustomerEmpty) {%>
-            <h1>Unauthorized action</h1>
-            <button onclick="location.href='http://localhost:8080/IOTBay/'" class="button">Back to index page</button>
+        <%if(isCustomerEmpty) {
+            response.sendRedirect(redirectURL);
+        %>
         <%}else {%>
             <h1>Logout Page</h1>
             <h2>Your account has been logged out. </h2>

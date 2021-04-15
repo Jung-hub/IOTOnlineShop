@@ -21,6 +21,8 @@
             //Get data from the object
             Customer customer = customerList.getLoggedCustomer();
             
+            String redirectURL = "http://localhost:8080/IOTBay/unauthorised.jsp";
+            
             //Store user info into variables
             String pName = customer.getUsername();
             String pEmail = customer.getEmail();
@@ -63,18 +65,18 @@
                     session.setAttribute("customerList", customerList);
                     
             }
-        %>
-        <%if(isCustomerEmpty) {%>
-            <h1>Unauthorized action</h1>
-            <button onclick="location.href='http://localhost:8080/IOTBay/'" class="button">Back to index page</button>
-        <%}else {%>
+        
+            if(isCustomerEmpty) {
+                response.sendRedirect(redirectURL);
+        
+            }else {%>
             <form class="box" action="edit.jsp" method="post" id="update">
                 <h1>Edit Profile</h1>
                 <input type="text" id="fname" name="fname" autocomplete="off" placeholder="First Name">
                 <input type="text" id="lname" name="lname" autocomplete="off" placeholder="Last Name">
-                <input type="mail" id="email" name="email" autocomplete="off" placeholder="xxx@xxx.xxx" required>
-                <input type="date" id="birthday" name="birthday" autocomplete="off" placeholder="DD/MM/YYYY">
-                <input type="tel" id="phone" name="phone" autocomplete="off" placeholder="1234567890">
+                <input type="mail" id="email" name="email" autocomplete="off" placeholder="Email" value="<%=pEmail%>" required>
+                <input type="date" id="birthday" name="birthday" autocomplete="off" required>
+                <input type="tel" id="phone" name="phone" autocomplete="off" placeholder="Phone Number">
                 <input type="submit" form="update" name="updated" value="Update">
                 <input type="button" value="Back" onclick="location.href='http://localhost:8080/IOTBay/profile.jsp'">
                 <%

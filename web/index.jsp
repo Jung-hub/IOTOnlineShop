@@ -8,7 +8,6 @@
 <%@page import="uts.isd.model.*"%>
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="CSS/index.css">
@@ -17,13 +16,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <%
-            CustomerAccount customerList = (CustomerAccount)session.getAttribute("customerList");
-            if(customerList == null) {
-                customerList = new CustomerAccount();
-                session.setAttribute("customerList", customerList);
-            }
-        %>
+        <jsp:include page="/ConnServlet" flush="true" />
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -33,7 +26,6 @@
             <ul>
                 <li><a href="login.jsp">Sign in</a></li>
                 <li><a href="register.jsp">Sign up</a></li>
-                <li><a href="accountlist.jsp">Account list</a></li>
             </ul>
         </nav>
         <section></section>

@@ -1,0 +1,8 @@
+
+Create database guidance
+
+1 Create database called ISD with root for both account and password
+
+2 In database table folder, right click and choose restructure for importing all database.grab file into table folder
+
+3 For instance addition, right click each table, choose execute command, and then copy and paste instance instruction from each database text file 

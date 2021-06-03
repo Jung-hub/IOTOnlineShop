@@ -112,9 +112,12 @@ body {
 }
 
 .box p {
-    color: green;
+   
 }
 
 .errorinfo {
     color: red;
+}
+.successinfo {
+    color: green;
 }

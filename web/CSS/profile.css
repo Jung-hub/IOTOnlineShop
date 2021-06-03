@@ -1,75 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 03/04/2021, 3:04:36 PM
-    Author     : Administrator
-*/
-/*
-h1 {
-    padding: 0px 15px;
-    float: left;
-}
 
-nav {
-    float: right;
-    
-}
-
-nav ul {
-    margin: 0;
-    padding: 15px;
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-}
-header {
-    background-image: url('https://miro.medium.com/max/4800/0*Ujfq0bFIEYEoMiEG');
-    
-    
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-    
-}
-
-.button {
-        padding: 15px 25px;
-        font-size: 12px;
-        text-align: center;
-        cursor: pointer;
-        outline: none;
-        color: #fff;
-        background-color: #4CAF50;
-        border: none;
-        transition-duration: 0.2s;
-        width: 150px;
-}
-
-.button:hover {
-        background-color: #a2a2a2;
-}
-
-.button:active {
-        background-color: #3e8e41;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-}
-
-.container {
-        
-        width: 100%;
-        margin: 0 auto;
-    
-}
-*/
 * {
     padding: 0;
     margin: 0;
@@ -90,9 +19,23 @@ body {
 }
 
 nav {
-    background: #3CB371;
+    /*background: #3CB371;*/
     height: 80px;
     width: 100%;
+}
+
+.root {
+    background: #5A7670;
+    
+}
+
+.staff {
+    background: #B89F5D;
+    
+}
+
+.customer {
+    background: #3FB0AC;
 }
 
 label.logo {
@@ -253,14 +196,11 @@ section {
 
 
 .table-style tbody tr:last-of-type {
-    
-    border-bottom: 1px solid #3CB371;
-    
+    border-bottom: 1px solid white;
 }
 
 
 .table-header {
-    background-color: #3CB371;
     color: #ffffff;
     font-weight: bold;
     width: 40%;

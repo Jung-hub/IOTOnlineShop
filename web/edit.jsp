@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uts.isd.model.*"%>
+<%--//STEP 1. Import required packages --%>
+<%@page import="java.sql.*"%>
+<%@page import="uts.isd.model.dao.*"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,80 +18,27 @@
     </head>
     <body>
         <%
-            //Get data from session
-            CustomerAccount customerList= (CustomerAccount) session.getAttribute("customerList");
-            
-            //Get data from the object
-            Customer customer = customerList.getLoggedCustomer();
-            
-            String redirectURL = "http://localhost:8080/IOTBay/unauthorised.jsp";
-            
-            //Store user info into variables
-            String pName = customer.getUsername();
-            String pEmail = customer.getEmail();
-            String pBirthday = customer.getBirthday();
-            String pPhone = customer.getPhone();
-            
-            
-            //The variable is to check user presses update button or not 
-            String updated = request.getParameter("updated");
-            
-            //The variables is to check to disply the update result
-            boolean isCustomerEmpty = customer == null? true: false;
-            boolean isUpdateSuccessful = false;
-            boolean isUpdateOn = updated != null? true : false;
-            
-            //The variables is store the inforamtion of success or failure update
-            String successInfo = "Successfully update";
-            String failureInfo = "Update Failure! Check the code";
-            
-            if(isUpdateOn) {
-                    String firstName = request.getParameter("fname");
-                    String lastName = request.getParameter("lname");
-                    String email = request.getParameter("email");
-                    String birthday = request.getParameter("birthday");
-                    String phone = request.getParameter("phone");
-                    
-                    //create an object to initialise customer fields
-                    Customer updatedCustomer = new Customer(customer.getUsername(), customer.getPassword(), customer.getEmail());
-                    
-                    //enable the customer logging condition
-                    updatedCustomer.setIsLogged(true);
-                    
-                    //update customer profile
-                    updatedCustomer.setProfile(firstName, lastName , email, birthday, phone);
-                    
-                    //update customer to list and check the functionality is successful or not
-                    isUpdateSuccessful = customerList.updateCustomer(customer, updatedCustomer);
-                    
-                    //update session
-                    session.setAttribute("customerList", customerList);
-                    
-            }
-        
-            if(isCustomerEmpty) {
-                response.sendRedirect(redirectURL);
-        
-            }else {%>
-            <form class="box" action="edit.jsp" method="post" id="update">
-                <h1>Edit Profile</h1>
-                <input type="text" id="fname" name="fname" autocomplete="off" placeholder="First Name">
-                <input type="text" id="lname" name="lname" autocomplete="off" placeholder="Last Name">
-                <input type="mail" id="email" name="email" autocomplete="off" placeholder="Email" value="<%=pEmail%>" required>
-                <input type="date" id="birthday" name="birthday" autocomplete="off" required>
-                <input type="tel" id="phone" name="phone" autocomplete="off" placeholder="Phone Number">
-                <input type="submit" form="update" name="updated" value="Update">
-                <input type="button" value="Back" onclick="location.href='http://localhost:8080/IOTBay/profile.jsp'">
-                <%
-                if(isUpdateOn) {
-                    if(isUpdateSuccessful) {%>
-                        <p><%=successInfo%></p>
-                    <%}else {%>
-                        <p class="errorinfo"><%=failureInfo%></p>
-                    <%}%>
-                <%}%>
-            </form>
-        <%}%>
-            
+            User user = (User) session.getAttribute("user");
+            String emailErr = (String) session.getAttribute("emailErr");
+            String profileUpdate = (String) session.getAttribute("profileUpdate");
+            String firstnameErr = (String) session.getAttribute("firstnameErr");
+            String lastnameErr = (String) session.getAttribute("lastnameErr");
+            String phoneNumberErr = (String) session.getAttribute("phoneNumberErr");
+        %>  
+        <form class="box" action="EditServlet" method="post" id="update">
+            <h1>Edit Profile</h1>
+            <input type="text" id="fname" name="fname" autocomplete="off" placeholder="First Name" value="<%=user.getUserFirstName()%>">
+            <input type="text" id="lname" name="lname" autocomplete="off" placeholder="Last Name" value="<%=user.getUserLastName()%>">
+            <input type="mail" id="email" name="email" autocomplete="off" placeholder="Email" value="<%=user.getEmail()%>" required>
+            <input type="date" id="birthday" name="birthday" autocomplete="off" value="<%=user.getBirthday()%>" required>
+            <input type="tel" id="phone" name="phone" autocomplete="off" placeholder="Phone Number" value="<%=user.getPhone()%>">
+            <input type="submit" form="update" name="updated" value="Update">
+            <input type="button" value="Back" onclick="location.href='http://localhost:8080/IOTBay/ProfileController'">
+            <p class="errorinfo"><%=firstnameErr != null? firstnameErr: ""%></p>
+            <p class="errorinfo"><%=lastnameErr != null? lastnameErr: ""%></p>
+            <p class="errorinfo"><%=emailErr != null? emailErr: ""%></p>
+            <p class="errorinfo"><%=phoneNumberErr != null? phoneNumberErr: ""%></p>
+            <p class="successinfo"><%=profileUpdate != null? profileUpdate: ""%></p>
+        </form>
     </body>
 </html>

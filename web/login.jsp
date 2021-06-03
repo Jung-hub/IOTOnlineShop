@@ -4,8 +4,13 @@
     Author     : 
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="uts.isd.model.*"%>
+<%@page import="uts.isd.model.dao.*"%>
+<%--//STEP 1. Import required packages --%>
+<%@page import="java.sql.*"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,42 +19,33 @@
         <title>Login Page</title>
     </head>
     <body>
+        
         <%
-            CustomerAccount customerList = (CustomerAccount) session.getAttribute("customerList");
-            Customer customer = customerList.getLoggedCustomer();
-            String login = request.getParameter("login");
-            String redirectURL = "http://localhost:8080/IOTBay/welcome.jsp";
+            String redirectURL = "http://localhost:8080/IOTBay/WelcomeController";
+            String existErr = (String)session.getAttribute("existErr");
+            String passErr = (String)session.getAttribute("passErr");
+            String usernameErr = (String) session.getAttribute("usernameErr");
+            String userLock = (String)session.getAttribute("userLock");
             
-            boolean isCustomerEmpty = customer == null? true : false;
-            boolean isLoginButtonClicked = login != null? true : false;
-            
-            boolean loginSuccessful = false;
-            
-            if(!isCustomerEmpty) {
+            User user = (User)session.getAttribute("user");
+            if (user != null) {
                 response.sendRedirect(redirectURL);
-            }else {
-                if(login != null) {
-                    String name = request.getParameter("uname");
-                    String password = request.getParameter("upassword");
-                    loginSuccessful = customerList.setCustomerLogged(name, password);
-                    if(loginSuccessful) {
-                        session.setAttribute("customerList", customerList);
-                        response.sendRedirect(redirectURL);
-                    }
-                }
             }
             
         %>
-       
         
-        <form class="box" action="login.jsp" method="get" id="login">
+        <form class="box" action="LoginServlet" method="post" id="login">
             <h1>Login</h1>
             <input type="text" id="uname" name="uname" autocomplete="off" placeholder="Username" required>
             <input type="password" id="upassword" name="upassword" autocomplete="off" placeholder="Password" required>
             <input type="submit" form="login" name="login" value="Login">
             <input type="button" value="Back" onclick="location.href='http://localhost:8080/IOTBay/'">
             <p> Not a Customer? <a href="register.jsp">Register</a></p>
-            <p class="errorinfo"><%= isLoginButtonClicked? loginSuccessful? "": "Invalid password. Please try again" :"" %></p>
+            <p class="errorinfo"><%=usernameErr != null? usernameErr: ""%></p>
+            <p class="errorinfo"><%=passErr != null? passErr: ""%></p>
+            <p class="errorinfo"><%=userLock != null? userLock: ""%></p>
+            <p class="errorinfo"><%=existErr != null? existErr: ""%></p>
+            
         </form>
         
     </body>

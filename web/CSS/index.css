@@ -4,8 +4,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on :  jung
-    Author     :  yeh
+    Created on : 
+    Author     :  Jung
 */
 /*
 h1 {
@@ -95,9 +95,6 @@ header::after {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /*
-    background-image: url('https://miro.medium.com/max/4800/0*Ujfq0bFIEYEoMiEG');
-    */
     background-image: url('../img/background.jpg');
 }
 

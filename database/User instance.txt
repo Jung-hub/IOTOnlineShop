@@ -1,0 +1,43 @@
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('admin', 'admin', '0', '', '', '', '', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('staff', 'staff', '1', '', '', '', 'staff.staff@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('manager', 'manager', '1', '', '', '', 'manager.manager@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('sales', 'sales', '1', '', '', '', 'sales.sales@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer01', 'customer01', '2', '', '', '', 'company.customer01@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer02', 'customer02', '2', '', '', '', 'company.customer02@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer03', 'customer03', '2', '', '', '', 'company.customer03@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer04', 'customer04', '2', '', '', '', 'company.customer04@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer05', 'customer05', '2', '', '', '', 'company.customer05@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer06', 'customer06', '2', '', '', '', 'company.customer06@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer07', 'customer07', '2', '', '', '', 'company.customer07@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer08', 'customer08', '2', '', '', '', 'company.customer08@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer09', 'customer09', '2', '', '', '', 'company.customer09@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('customer10', 'customer10', '2', '', '', '', 'company.customer10@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('12599193', '12599193', '2', '', '', '', '12599193.Lily@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('13328000', '13328000', '2', '', '', '', '13328000.Jung@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('13318821', '13318821', '2', '', '', '', '13318821.PengHuan@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('13224023', '13224023', '2', '', '', '', '13224023.Shadi@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('13273848', '13273848', '2', '', '', '', '13273848.Elizabeth@uts.edu.au', '', '1');
+INSERT INTO ROOT.USERS (USERNAME, PASSWORD, USERTYPE, FIRSTNAME, LASTNAME, PHONE, EMAIL, DOB, STATUS) 
+	VALUES ('13206501', '13206501', '2', '', '', '', '13273848.Ignacio@uts.edu.au', '', '1');
+
+
+
